@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "a8f03e1c-5a6f-4a4f-ba6f-2a9436f42851",
+		"name": "Homework 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27495443"
+	},
+	"item": [
+		{
+			"name": "Profile auth user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing first name user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Joe\",\r\n    \"username\": \"Test111111111\",\r\n    \"phone\": \"79998787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"male\",\r\n    \"birthDate\": \"1995-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing last name user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test 2\",\r\n    \"username\": \"Test111111111\",\r\n    \"phone\": \"79998787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"male\",\r\n    \"birthDate\": \"1995-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test 2\",\r\n    \"username\": \"Test14881\",\r\n    \"phone\": \"79998787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"male\",\r\n    \"birthDate\": \"1994-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing phone user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test 2\",\r\n    \"username\": \"Test1488\",\r\n    \"phone\": \"79918787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"male\",\r\n    \"birthDate\": \"1995-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing sex user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test 2\",\r\n    \"username\": \"Test1488\",\r\n    \"phone\": \"79918787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"female\",\r\n    \"birthDate\": \"1995-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing birthday user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test 2\",\r\n    \"username\": \"Test1488\",\r\n    \"phone\": \"79918787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"female\",\r\n    \"birthDate\": \"2000-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editing image user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "bd4631ce6d24a7e8ee276fc306f18c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10902,\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test 2\",\r\n    \"username\": \"Test1488\",\r\n    \"phone\": \"79918787765\",\r\n    \"status\": \"active\",\r\n    \"sex\": \"female\",\r\n    \"birthDate\": \"1995-11-24T00:00:00+00:00\",\r\n    \"avatar\": {\r\n        \"id\": null,\r\n        \"cdnUrl\": \"\"\r\n    },\r\n    \"updatedAt\": \"2023-05-21T16:16:27+00:00\",\r\n    \"createdAt\": \"2023-05-14T14:13:17+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/10902",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"10902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.globals.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Test1488",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "03c7ea8a27",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"pm.globals.get(\"variable_key\");"
+				]
+			}
+		}
+	]
+}

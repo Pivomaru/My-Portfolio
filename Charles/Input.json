@@ -1,0 +1,18 @@
+{
+	"item": {
+		"id": 10910,
+		"firstName": "Jhony",
+		"lastName": "Cage ",
+		"username": "Test 4444444",
+		"phone": "89034562341",
+		"status": "active",
+		"sex": "male",
+		"birthDate": "1994-12-12T00:00:00+00:00",
+		"avatar": {
+			"id": null,
+			"cdnUrl": ""
+		},
+		"updatedAt": "2023-05-14T14:21:23+00:00",
+		"createdAt": "2023-05-14T14:21:23+00:00"
+	}
+}

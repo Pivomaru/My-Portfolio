@@ -1,0 +1,1045 @@
+{
+	"info": {
+		"_postman_id": "a29e607a-dcdb-4d72-8f49-2c8afa1014a2",
+		"name": "Get feed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27495443"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Test 33 3333333333333333",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "4604a82d7c",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post only image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post only title",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post only discription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is Ilon Mask",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post only content",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Сдесь могла бы быть ваша реклама)",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post title 1 symbol",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "T",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is test post, never mind)",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "peek-a-boo",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post title 41 symbol",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "qwertyuiopasdfghjklzxcvbnm123456789009876",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Well",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Oh",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post description 1 symbol",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post description 106 symbols",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "аааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post image format png",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/Скриншоты/скрин 2.png"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "oh my",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post image 5mb",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/Snake_River_(5mb).jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "gfgfg",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post content 1 symbol",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "а",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post content 1019 symbols",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "....",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post draft",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "аааааааааааааааааааааааааааааааааааа",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post image 1:1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "аааsdrgdfs",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post without iamge(zaglushka)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "ac70843c4168d41fd32ab33c42df2e7f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spard/OneDrive/Рабочий стол/ден.jpg",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "аааааааааааааааааааааааааааааааааааа",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aha",
+							"type": "text"
+						},
+						{
+							"key": "isDraft",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "delayPublishTo",
+							"value": "2023-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/posts",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "6742dfa1fb",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "Test111111111",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"pm.globals.get(\"variable_key\");"
+				]
+			}
+		}
+	]
+}
